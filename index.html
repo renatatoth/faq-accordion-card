@@ -6,40 +6,50 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
 <body>
-    <main>
-        <aside>
-            <img src="./images/illustration-woman-online-desktop.svg" alt="Illustration">
+    <div class="faq-box">
+        <img class="illustration-box" src="./images/illustration-box-desktop.svg" alt="Illustration of a box">
+        <aside class="img-box">
+            <img class="illustration-woman" src="./images/illustration-woman-online-desktop.svg"
+                 alt="Illustration of a woman">
         </aside>
-        <header>
-            <h1>FAQ</h1>
-        </header>
-        <section>
-            <button>How many team members can I invite?</button>
-            <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
-        </section>
-        <section>
-            <button>What is the maximum file upload size?</button>
-            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
-        </section>
-        <section>
-            <button>How do I reset my password?</button>
-            <p>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
-        </section>
-        <section>
-            <button>Can I cancel my subscription?</button>
-            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
-        </section>
-        <section>
-            <button>Do you provide additional support?</button>
-            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-        </section>
-    </main>
+        <main class="text-box">
+            <header class="header">
+                <h1>FAQ</h1>
+            </header>
+            <section class="question-box">
+                <button class="question-btn">How many team members can I invite?</button>
+                <p class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on team
+                    members for the Premium plan.</p>
+            </section>
+            <section class="question-box">
+                <button class="question-btn">What is the maximum file upload size?</button>
+                <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </section>
+            <section class="question-box">
+                <button class="question-btn">How do I reset my password?</button>
+                <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile
+                    page. A reset
+                    link will be emailed to you.</p>
+            </section>
+            <section class="question-box">
+                <button class="question-btn">Can I cancel my subscription?</button>
+                <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </section>
+            <section class="question-box">
+                <button class="question-btn">Do you provide additional support?</button>
+                <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business
+                    hours.</p>
+            </section>
+        </main>
+    </div>
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="#">Your Name Here</a>.

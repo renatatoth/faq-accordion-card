@@ -1,3 +1,108 @@
+html {
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', 'Arial', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --dark-blue: hsl(238, 29%, 16%);
+    --red: hsl(14, 88%, 65%);
+    --violet: hsl(273, 75%, 66%);
+    --light-blue: hsl(240, 73%, 65%);
+    --dark-grey: hsl(237, 12%, 33%);
+    --light-grey: hsl(240, 6%, 50%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(var(--violet), var(--light-blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.faq-box {
+    width: 70vw;
+    background: #fff url('images/bg-pattern-desktop.svg') no-repeat -60%;
+    background-size: 60%;
+    display: flex;
+    border-radius: 2rem;
+    padding: 3rem;
+    overflow: hidden;
+    margin-bottom: 5rem;
+    box-shadow: 0 1rem 3rem var(--dark-grey);
+}
+
+.img-box {
+    margin-right: 5rem;
+    position: relative;
+}
+
+.illustration-woman {
+    position: relative;
+    left: -10rem;
+}
+
+.illustration-box {
+    position: absolute;
+    top: 42%;
+    left: 9%;
+    z-index: 10;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.header {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+}
+
+.question-box {
+    display: inline-block;
+    width: 70%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.question-btn {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    border: none;
+    font-family: 'Kumbh Sans', 'Arial', sans-serif;
+    color: var(--dark-blue);
+    text-align: left;
+    cursor: pointer;
+}
+
+.question-btn::after {
+    content: url("images/icon-arrow-down.svg");
+    position: absolute;
+    right: 1rem;
+}
+
+
+
+.answer {
+    display: none;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
