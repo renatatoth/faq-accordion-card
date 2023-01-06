@@ -75,6 +75,7 @@ body {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--light-grey);
+    overflow: hidden;
 }
 
 .question-btn {
@@ -86,24 +87,36 @@ body {
     color: var(--dark-blue);
     text-align: left;
     cursor: pointer;
-    transition: .2s ease-in-out;
+    transition: .2s all ease-in-out;
+}
+
+.question-btn:hover {
+    color: var(--red);
 }
 
 .question-btn::after {
     content: url("images/icon-arrow-down.svg");
     position: absolute;
     right: 1rem;
+    transition: .3s all ease-in-out;
+}
+
+.question-btn.active::after {
+    transform: rotate(180deg);
 }
 
 .answer {
-    display: none;
-    margin-top: 1.5rem;
+    height: 0;
+    opacity: 0;
+    margin-top: 0;
     color: var(--light-grey);
-    transition: .2s ease-in-out;
+    transition: .2s all ease-in-out;
 }
 
 .open {
-    display: block;
+    height: auto;
+    opacity: 100%;
+    margin-top: 1.5rem;
 }
 
 .active {

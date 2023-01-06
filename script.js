@@ -1,17 +1,23 @@
 const questionBtn = document.querySelectorAll('.question-btn');
-const answer = document.querySelectorAll('.answer');
+const answerBox = document.querySelectorAll('.answer');
+let selectedQuestion;
 
 const resetQuestionBoxes = () => {
-    answer.forEach(ans => ans.classList.remove('open'));
+    answerBox.forEach(ans => ans.classList.remove('open'));
     questionBtn.forEach(ans => ans.classList.remove('active'));
 };
 
 const showAnswer = (e) => {
-    //resetQuestionBoxes();
     const currQuestion = e.target;
     const currAnswer = currQuestion.parentNode.lastElementChild;
-    currAnswer.classList.toggle('open');
+
+    if (selectedQuestion !== currQuestion) {
+        resetQuestionBoxes();
+    }
+
     currQuestion.classList.toggle('active');
+    currAnswer.classList.toggle('open');
+    selectedQuestion = currQuestion;
 };
 
 questionBtn.forEach(question => question.addEventListener('click', showAnswer));
