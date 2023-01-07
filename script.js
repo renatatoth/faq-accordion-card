@@ -1,5 +1,6 @@
 const questionBtn = document.querySelectorAll('.question-btn');
 const answerBox = document.querySelectorAll('.answer');
+const illustrationBox = document.querySelector('.illustration-box');
 let selectedQuestion;
 
 const resetQuestionBoxes = () => {
@@ -20,4 +21,14 @@ const showAnswer = (e) => {
     selectedQuestion = currQuestion;
 };
 
+const moveBox = () => {
+    illustrationBox.style.transform = 'translate(-67%, 94%)';
+};
+
+const resetBox = () => {
+    illustrationBox.style.transform = 'translate(-47%, 94%)';
+};
+
 questionBtn.forEach(question => question.addEventListener('click', showAnswer));
+questionBtn.forEach(question => question.addEventListener('mouseover', moveBox));
+questionBtn.forEach(question => question.addEventListener('mouseout', resetBox));
