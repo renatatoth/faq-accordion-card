@@ -22,11 +22,11 @@ const showAnswer = (e) => {
 };
 
 const moveBox = () => {
-    illustrationBox.style.transform = 'translate(-67%, 94%)';
+    illustrationBox.classList.add('slide');
 };
 
 const resetBox = () => {
-    illustrationBox.style.transform = 'translate(-47%, 94%)';
+    illustrationBox.classList.remove('slide');
 };
 
 questionBtn.forEach(question => question.addEventListener('click', showAnswer));

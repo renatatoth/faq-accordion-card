@@ -71,6 +71,7 @@ body {
     .faq-box {
         width: 85%;
         margin-top: 15rem;
+        background-position: 2rem 0;
     }
 }
 
@@ -112,17 +113,14 @@ body {
 .illustration-box {
     position: absolute;
     z-index: 10;
-    transform: translate(-47%, 94%);
+    top: 42%;
+    left: -6rem;
     transition: .3s all ease-in-out;
 }
 
-@keyframes moveBox {
-    0% {
-        transform: translate(-47%, 94%);
-    }
-
-    100% {
-        transform: translate(-77%, 94%);
+@media only screen and (max-width: 1285px) {
+    .illustration-box {
+        width: 20%;
     }
 }
 
@@ -131,6 +129,17 @@ body {
         display: none;
     }
 }
+
+.slide {
+    transform: translateX(-25%);
+}
+
+@media only screen and (max-width: 1285px) {
+    .slide {
+        transform: translateX(-20%);
+    }
+}
+
 
 .text-container {
     margin: 4rem 0;
@@ -144,13 +153,14 @@ body {
 
 .header {
     margin-bottom: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--dark-blue);
 }
 
 @media only screen and (max-width: 768px) {
     .header {
         text-align: center;
+        font-size: 1.5rem;
     }
 }
 
@@ -180,6 +190,7 @@ body {
     text-align: left;
     cursor: pointer;
     transition: .2s all ease-in-out;
+    font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -190,10 +201,6 @@ body {
 
 .question-btn:hover {
     color: var(--red);
-}
-
-.question-btn:hover ~ .illustration-box {
-    transform: translate(-27%, 94%);
 }
 
 .question-btn::after {
@@ -213,6 +220,8 @@ body {
     margin-top: 0;
     color: var(--light-grey);
     transition: .2s all ease-in-out;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 @media only screen and (max-width: 768px) {
